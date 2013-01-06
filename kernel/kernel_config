@@ -1747,33 +1747,99 @@ CONFIG_MEDIA_SUPPORT=y
 #
 # Multimedia core support
 #
-# CONFIG_MEDIA_CAMERA_SUPPORT is not set
+CONFIG_MEDIA_CAMERA_SUPPORT=y
 # CONFIG_MEDIA_ANALOG_TV_SUPPORT is not set
 # CONFIG_MEDIA_DIGITAL_TV_SUPPORT is not set
 # CONFIG_MEDIA_RADIO_SUPPORT is not set
 # CONFIG_MEDIA_RC_SUPPORT is not set
+# CONFIG_MEDIA_CONTROLLER is not set
+CONFIG_VIDEO_DEV=y
+CONFIG_VIDEO_V4L2=y
 # CONFIG_VIDEO_ADV_DEBUG is not set
 # CONFIG_VIDEO_FIXED_MINOR_RANGES is not set
+CONFIG_VIDEOBUF2_CORE=y
+CONFIG_VIDEOBUF2_MEMOPS=y
+CONFIG_VIDEOBUF2_VMALLOC=y
 
 #
 # Media drivers
 #
-# CONFIG_MEDIA_USB_SUPPORT is not set
+CONFIG_MEDIA_USB_SUPPORT=y
+
+#
+# Webcam devices
+#
+CONFIG_USB_VIDEO_CLASS=y
+CONFIG_USB_VIDEO_CLASS_INPUT_EVDEV=y
+# CONFIG_USB_GSPCA is not set
+# CONFIG_USB_PWC is not set
+# CONFIG_VIDEO_CPIA2 is not set
+# CONFIG_USB_ZR364XX is not set
+# CONFIG_USB_STKWEBCAM is not set
+# CONFIG_USB_S2255 is not set
+# CONFIG_USB_SN9C102 is not set
+
+#
+# Webcam, TV (analog/digital) USB devices
+#
+# CONFIG_VIDEO_EM28XX is not set
 # CONFIG_MEDIA_PCI_SUPPORT is not set
+# CONFIG_V4L_PLATFORM_DRIVERS is not set
+# CONFIG_V4L_MEM2MEM_DRIVERS is not set
+# CONFIG_V4L_TEST_DRIVERS is not set
 
 #
 # Supported MMC/SDIO adapters
 #
+CONFIG_MEDIA_SUBDRV_AUTOSELECT=y
 
 #
 # Media ancillary drivers (tuners, sensors, i2c, frontends)
 #
 
 #
-# Customise DVB Frontends
+# Audio decoders, processors and mixers
 #
-CONFIG_DVB_TUNER_DIB0070=m
-CONFIG_DVB_TUNER_DIB0090=m
+
+#
+# RDS decoders
+#
+
+#
+# Video decoders
+#
+
+#
+# Video and audio decoders
+#
+
+#
+# MPEG video encoders
+#
+
+#
+# Video encoders
+#
+
+#
+# Camera sensor devices
+#
+
+#
+# Flash devices
+#
+
+#
+# Video improvement chips
+#
+
+#
+# Miscelaneous helper chips
+#
+
+#
+# Sensors used on soc_camera driver
+#
 
 #
 # Tools to develop new frontends
@@ -2084,7 +2150,7 @@ CONFIG_HID_EZKEY=y
 # CONFIG_HID_TWINHAN is not set
 CONFIG_HID_KENSINGTON=y
 # CONFIG_HID_LCPOWER is not set
-# CONFIG_HID_LENOVO_TPKBD is not set
+CONFIG_HID_LENOVO_TPKBD=y
 CONFIG_HID_LOGITECH=y
 CONFIG_HID_LOGITECH_DJ=m
 CONFIG_LOGITECH_FF=y
