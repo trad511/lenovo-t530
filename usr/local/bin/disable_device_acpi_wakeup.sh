@@ -13,8 +13,10 @@
 #EHC2	  S3	*disabled  pci:0000:00:1a.0
 #HDEF	  S4	*disabled  pci:0000:00:1b.0
 
-
-#[[ $(id -u) == 0 ]] || exit 1
+#
+# Only root can run
+#
+[[ $(id -u) == 0 ]] || exit 1
 
 FILE="/proc/acpi/wakeup"
 
