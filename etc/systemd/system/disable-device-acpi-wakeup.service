@@ -1,0 +1,15 @@
+#
+#
+#
+#
+
+[Unit]
+Description=Disable some acpi wakeup capabilities
+ConditionPathIsReadWrite=/proc/acpi/wakeup
+
+[Service]
+Type=oneshot
+ExecStart=/usr/local/bin/disable_device_acpi_wakeup.sh
+
+[Install]
+WantedBy=basic.target
